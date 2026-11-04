@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-forest: #123B2B;
+  --dark-green: #0B2119;
+  --emerald: #16834A;
+  --bright-accent: #22A06B;
+  --soft-mint: #DDF5E8;
+  --background: #F5F8F5;
+  --white: #FFFFFF;
+  --primary-text: #14231B;
+  --secondary-text: #728078;
+  --borders: #DCE6DF;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--primary-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #DCE6DF;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16834A;
+}
+
+/* Print optimizations for Newsroom Reports */
+@media print {
+  aside, header, button, nav, .no-print {
+    display: none !important;
+  }
+  body, main {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
